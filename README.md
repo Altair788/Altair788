@@ -64,7 +64,7 @@
 - Точность геокодинга: >95% для адресов СПб и МО (47/49 адресов)
 - Время обновления: с ручного (15-30 мин) до автоматического (1-5 мин)
 
-🔗 [Демо](https://script.google.com/...) | 🔗 [Код](https://github.com/Altair788/delivery-map-sync)
+🔗 [Код]([https://github.com/Altair788/delivery-map-sync](https://github.com/Altair788/delivery-map-sync.git))
 
 ---
 
