@@ -19,7 +19,7 @@
 - Обработано свыше **50 000 заявок** с момента запуска.  
 - **Сокращение времени ожидания на въезде на 90%**, снижение затрат на охрану до **20–30%**.  
 - Кастомизация под клиента — разработано **более 5 дополнительных решений**.  
-🔗 [Статья на VC.ru](https://vc.ru/dev/1832401-kak-my-avtomatizirovali-proezd-v-parking-v-klastere-lomonosov-i-izbavili-gostei-ot-ocheredei  )
+🔗 [Статья на VC.ru](https://vc.ru/dev/1832401-kak-my-avtomatizirovali-proezd-v-parking-v-klastere-lomonosov-i-izbavili-gostei-ot-ocheredei)
 
 ---
 
@@ -47,21 +47,23 @@
 - Проект масштабирован и используется в ежедневной операционной деятельности.  
 
 ---
-### .5 🟢 SINGLE — Система визуализации логистических данных на базе Google Apps Script + Leaflet.js
-*(
-Backend - Google Apps Script (JavaScript ES6)
-Frontend - Leaflet.js + OpenStreetMap
-Геокодинг - Nominatim API
-Хранение - Google Sheets (GeoCache, GeocodingErrors)
-Деплой - Google Apps Script Web App
-)*  
 
-- автоматический геокодинг, кэширование, автообновление каждые 5 минут, экспорт в KML
-- заменил Google Geocoding API ($5/1000 запросов) + Maps JavaScript API ($7/1000 загрузок) 
-  на бесплатные Nominatim API + Leaflet.js + OpenStreetMap, реализовав точность геокодинга > 95%
-- реализовал кэширование, rate-limiting и обработку ошибок (429/403) для соблюдения лимитов бесплатного тарифа,
-  обеспечив масштабируемость в рамках бесплатных квот (Nominatim: 1 req/sec, Apps Script: 6 min/exec)
-- сэкономил 200$ в месяц на лицензиях API
+### 5. 🟢 SINGLE — Система визуализации логистических данных
+*(Google Apps Script, Leaflet.js, Nominatim API, OpenStreetMap)*
+- Разработал full-stack решение для автоматического геокодинга и визуализации адресов из Google Sheets
+- Заменил платные Google Geocoding/Maps API ($5-7/1000 запросов) на бесплатные Nominatim + Leaflet.js → экономия ~$200/мес при масштабировании
+- Реализовал кэширование, rate-limiting и обработку ошибок (429/403) для соблюдения лимитов бесплатного тарифа
+- Обеспечил точность геокодинга >95% для адресов РФ, автообновление данных каждые 5 минут
+- Добавил экспорт в KML, управление видимостью слоёв, логирование ошибок в отдельный лист
+- Стек: Google Apps Script, JavaScript ES6, Leaflet.js, OpenStreetMap, Nominatim API
+
+- Экономия ~$200/мес при масштабировании (10 пользователей × 50 адресов): 
+  Google Maps Platform: ~$285/мес → Nominatim+Leaflet: $0/мес
+- Точность геокодинга: >95% для адресов СПб и МО (47/49 адресов найдены с первого раза)
+- Время обновления данных: с ручного (15-30 мин) до автоматического (1-5 мин)
+🔗 [Демо](https://script.google.com/...) | 🔗 [Код](https://github.com/Altair788/delivery-map-sync)
+
+---
 
 ### 6. 🟢 SINGLE — Платформа объявлений adHub  
 *(Django, DRF, PostgreSQL, Docker)*  
@@ -116,6 +118,19 @@ Frontend - Leaflet.js + OpenStreetMap
 • Tools: `pytest`, `TDD/DDD`, `Google Apps Script`, `Leaflet.js`, `OpenStreetMap`
 
 ---
+
+
+## 💼 Технологический стек
+
+| Категория | Технологии |
+|-----------|-----------|
+| **Языки** | Python 3.12+, C, JavaScript (ES6), SQL, Bash |
+| **Backend** | FastAPI, Django/DRF, asyncio/aiohttp, Celery, Redis, PostgreSQL, SQLAlchemy, Pydantic |
+| **Infra/DevOps** | Docker, Kubernetes, Nginx, GitHub Actions, Linux, Git, Flower, Google Apps Script |
+| **Data/Analytics** | ClickHouse, Apache Kafka, Pandas, NumPy, Playwright |
+| **AI/ML** | GigaChat API, RAG, LangChain, llama.cpp, Hugging Face, Nominatim API |
+| **Testing** | pytest, coverage, TDD, DRF Universal API Test Mixins (own package) |
+| **Frontend** | Leaflet.js, OpenStreetMap, HTML/CSS |
 
 ## 📫 Контакты
 
