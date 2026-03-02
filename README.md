@@ -50,18 +50,18 @@
 
 ### 5. 🟢 SINGLE — Система визуализации логистических данных
 *(Google Apps Script, Leaflet.js, Nominatim API, OpenStreetMap)*
-- Разработал full-stack решение для автоматического геокодинга и визуализации адресов из Google Sheets
-- Заменил платные Google Geocoding/Maps API ($5-7/1000 запросов) на бесплатные Nominatim + Leaflet.js → экономия ~$200/мес при масштабировании
-- Реализовал кэширование, rate-limiting и обработку ошибок (429/403) для соблюдения лимитов бесплатного тарифа
-- Обеспечил точность геокодинга >95% для адресов РФ, автообновление данных каждые 5 минут
-- Добавил экспорт в KML, управление видимостью слоёв, логирование ошибок в отдельный лист
-- Стек: Google Apps Script, JavaScript ES6, Leaflet.js, OpenStreetMap, Nominatim API
+- Разработал full-stack решение для автоматического геокодинга и визуализации адресов из Google Sheets.
+- Заменил платные Google Geocoding/Maps API ($5-7/1000 запросов) на бесплатные Nominatim + Leaflet.js → экономия ~$200/мес при масштабировании.
+- Реализовал кэширование, rate-limiting и обработку ошибок (429/403) для соблюдения лимитов бесплатного тарифа.
+- Обеспечил точность геокодинга >95% для адресов РФ, автообновление данных каждые 5 минут.
+- Добавил экспорт в KML, управление видимостью слоёв, логирование ошибок в отдельный лист.
+- Стек: Google Apps Script, JavaScript ES6, Leaflet.js, OpenStreetMap, Nominatim API.
 
-- Экономия ~$200/мес при масштабировании (10 пользователей × 50 адресов): 
-  Google Maps Platform: ~$285/мес → Nominatim+Leaflet: $0/мес
-- Точность геокодинга: >95% для адресов СПб и МО (47/49 адресов найдены с первого раза)
-- Время обновления данных: с ручного (15-30 мин) до автоматического (1-5 мин)
-🔗 [Демо](https://script.google.com/...) | 🔗 [Код](https://github.com/Altair788/delivery-map-sync)
+- Экономия ~$200/мес при масштабировании (10 пользователей × 50 адресов):
+  Google Maps Platform: ~$285/мес → Nominatim+Leaflet: $0/мес.
+- Точность геокодинга: >95% для адресов СПб и МО (47/49 адресов найдены с первого раза).
+- Время обновления данных: с ручного (15-30 мин) до автоматического (1-5 мин).
+🔗 [Демо](https://script.google.com/...) | 🔗 [Код](https://github.com/Altair788/delivery-map-sync).
 
 ---
 
@@ -106,31 +106,22 @@
 - Разработал персонализированного ИИ-агента на базе GigaChat и n8n для анализа рынка труда, рекомендации специализаций и автоматической генерации учебных планов. Система ежедневно анализирует Telegram-каналы и вакансии (HH.ru), формируя дайджесты с актуальными навыками и трендами.
 - Реализовал RAG-систему для подбора релевантных вакансий на основе анализа резюме и личностных данных, используя Hugging Face эмбеддинги, векторное хранилище и GigaChat.
 - Автоматизировал сбор, суммаризацию и доставку контента через Telegram-бота с контекстным запоминанием (SimpleMemory) и интеграцией внешних API (Tavily Search).
----
-
-## 💼 Технологии
-
-• Языки: `Python 3.12`, `C`, `JavaScript (ES6)`, `SQL`, `Bash`
-• Backend: `FastAPI`, `Django/DRF`, `asyncio/aiohttp`, `Celery`, `Redis`, `PostgreSQL`, `SQLAlchemy`, `Pydantic`
-• Infra: Docker, Kubernetes, Nginx, GitHub Actions, Linux, Git, Flower (мониторинг)
-• Data: `ClickHouse`, `Apache Kafka`, `Pandas`, `NumPy`
-• AI/ML: `GigaChat API`, `RAG`, `LangChain`, `llama.cpp`, `Nominatim API`, `Google Sheets API`
-• Tools: `pytest`, `TDD/DDD`, `Google Apps Script`, `Leaflet.js`, `OpenStreetMap`
 
 ---
-
 
 ## 💼 Технологический стек
 
 | Категория | Технологии |
 |-----------|-----------|
 | **Языки** | Python 3.12+, C, JavaScript (ES6), SQL, Bash |
-| **Backend** | FastAPI, Django/DRF, asyncio/aiohttp, Celery, Redis, PostgreSQL, SQLAlchemy, Pydantic |
+| **Backend** | DDD, FastAPI, Django/DRF, asyncio/aiohttp, Celery, Redis, PostgreSQL, SQLAlchemy, Pydantic |
 | **Infra/DevOps** | Docker, Kubernetes, Nginx, GitHub Actions, Linux, Git, Flower, Google Apps Script |
 | **Data/Analytics** | ClickHouse, Apache Kafka, Pandas, NumPy, Playwright |
 | **AI/ML** | GigaChat API, RAG, LangChain, llama.cpp, Hugging Face, Nominatim API |
 | **Testing** | pytest, coverage, TDD, DRF Universal API Test Mixins (own package) |
 | **Frontend** | Leaflet.js, OpenStreetMap, HTML/CSS |
+
+---
 
 ## 📫 Контакты
 
