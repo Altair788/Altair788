@@ -11,7 +11,7 @@
 
 ---
 
-## 🚀 Коммерческие проекты (более 12 реализованных решений)
+## 🚀 Коммерческие проекты (более 17 реализованных решений)
 
 ### 1. 🟢 SINGLE — Сервис электронных пропусков с интеграцией IoT-шлагбаумов  
 *(Python 3.12, FastAPI, Celery, Redis, Docker)*  
@@ -19,7 +19,7 @@
 - Обработано свыше **50 000 заявок** с момента запуска.  
 - **Сокращение времени ожидания на въезде на 90%**, снижение затрат на охрану до **20–30%**.  
 - Кастомизация под клиента — разработано **более 5 дополнительных решений**.  
-🔗 [Статья на VC.ru](https://vc.ru/dev/1832401-kak-my-avtomatizirovali-proezd-v-parking-v-klastere-lomonosov-i-izbavili-gostei-ot-ocheredei)
+🔗 [Статья на VC.ru](https://vc.ru/dev/1832401-kak-my-avtomatizirovali-proezd-v-parking-v-klastere-lomonosov-i-izbavili-gostei-ot-ocheredei  )
 
 ---
 
@@ -47,8 +47,23 @@
 - Проект масштабирован и используется в ежедневной операционной деятельности.  
 
 ---
+### .5 🟢 SINGLE — Система визуализации логистических данных на базе Google Apps Script + Leaflet.js
+*(
+Backend - Google Apps Script (JavaScript ES6)
+Frontend - Leaflet.js + OpenStreetMap
+Геокодинг - Nominatim API
+Хранение - Google Sheets (GeoCache, GeocodingErrors)
+Деплой - Google Apps Script Web App
+)*  
 
-### 5. 🟢 SINGLE — Платформа объявлений adHub  
+- автоматический геокодинг, кэширование, автообновление каждые 5 минут, экспорт в KML
+- заменил Google Geocoding API ($5/1000 запросов) + Maps JavaScript API ($7/1000 загрузок) 
+  на бесплатные Nominatim API + Leaflet.js + OpenStreetMap, реализовав точность геокодинга > 95%
+- реализовал кэширование, rate-limiting и обработку ошибок (429/403) для соблюдения лимитов бесплатного тарифа,
+  обеспечив масштабируемость в рамках бесплатных квот (Nominatim: 1 req/sec, Apps Script: 6 min/exec)
+- сэкономил 200$ в месяц на лицензиях API
+
+### 6. 🟢 SINGLE — Платформа объявлений adHub  
 *(Django, DRF, PostgreSQL, Docker)*  
 - MVP за 3 дня, оптимизированный для быстрого вывода продукта.  
 - Безопасность: JWT, UID вместо ID, антиспам.  
@@ -56,7 +71,7 @@
 - Ролевая модель (user/admin).  
 - Docker-развертывание с PostgreSQL и Gunicorn.  
 - Покрытие тестами **97%** (pytest, coverage).  
-🔗 [GitHub](https://github.com/Altair788/AdHub.git)  
+🔗 [GitHub](https://github.com/Altair788/AdHub.git  )  
 🔗 [Swagger API](http://178.208.85.7:8082/swagger/)  
 🔗 [Админ-панель](http://178.208.85.7:8082/admin/login/?next=/admin/)  
 *(login: demo_admin@mail.ru, pass: UZw5qXBVIsdrt7shgGrdc)*
@@ -66,20 +81,20 @@
 ## 🏆 Open Source & Хакатоны
 
 ### 🔹 DRF Universal API Test Mixins
-[![PyPI](https://img.shields.io/pypi/v/drf-universal-api-test-mixins.svg)](https://pypi.org/project/drf-universal-api-test-mixins/)
-[![GitHub](https://img.shields.io/github/repo-size/Altair788/drf-universal-api-test-mixins)](https://github.com/Altair788/drf-universal-api-test-mixins)
+[![PyPI](https://img.shields.io/pypi/v/drf-universal-api-test-mixins.svg  )](https://pypi.org/project/drf-universal-api-test-mixins/  )
+[![GitHub](https://img.shields.io/github/repo-size/Altair788/drf-universal-api-test-mixins  )](https://github.com/Altair788/drf-universal-api-test-mixins  )
 > Инструмент для автоматизации тестирования DRF API — сокращает время написания тестов на 70%. Используется в реальных проектах.
 
 ---
 
 ### 🔹 Coal Fire Alert Service (Хакатон)
-[![GitHub](https://img.shields.io/github/repo-size/Altair788/coal-fire-alert-service)](https://github.com/Altair788/coal-fire-alert-service.git)
+[![GitHub](https://img.shields.io/github/repo-size/Altair788/coal-fire-alert-service  )](https://github.com/Altair788/coal-fire-alert-service.git  )
 > Асинхронный FastAPI-сервис + YOLOv11 + Telegram-бот. Обнаруживает огонь/дым на складах угля → мгновенные оповещения.
 
 ---
 
 ### 🔹 Coal Fire Predictor (GlowByte Hack 2025)
-[![GitHub](https://img.shields.io/github/repo-size/Altair788/coal-fire-predictor)](https://github.com/Altair788/coal-fire-predictor)
+[![GitHub](https://img.shields.io/github/repo-size/Altair788/coal-fire-predictor  )](https://github.com/Altair788/coal-fire-predictor  )
 > Прогноз риска самовозгорания угля на 3 дня через ML (joblib). Clean Architecture, FastAPI, PostgreSQL, Docker.
 
 ---
@@ -93,7 +108,12 @@
 
 ## 💼 Технологии
 
-`Python 3.12+` `Django` `DRF` `FastAPI` `PostgreSQL` `SQLAlchemy` `Redis` `Celery` `Docker` `Poetry` `CI/CD` `Git` `Nginx` `Linux` `Asyncio` `Aiohttp` `Pydantic` `pytest` `TDD` `DDD` `Clean Architecture`
+• Языки: `Python 3.12`, `C`, `JavaScript (ES6)`, `SQL`, `Bash`
+• Backend: `FastAPI`, `Django/DRF`, `asyncio/aiohttp`, `Celery`, `Redis`, `PostgreSQL`, `SQLAlchemy`, `Pydantic`
+• Infra: Docker, Kubernetes, Nginx, GitHub Actions, Linux, Git, Flower (мониторинг)
+• Data: `ClickHouse`, `Apache Kafka`, `Pandas`, `NumPy`
+• AI/ML: `GigaChat API`, `RAG`, `LangChain`, `llama.cpp`, `Nominatim API`, `Google Sheets API`
+• Tools: `pytest`, `TDD/DDD`, `Google Apps Script`, `Leaflet.js`, `OpenStreetMap`
 
 ---
 
@@ -101,7 +121,7 @@
 
 - 📬 Email: slobodyanik.ed@gmail.com  
 - 📱 Telegram: [@eslobodyanik](http://t.me/eslobodyanik)  
-- 💻 GitHub: [Altair788](https://github.com/Altair788)  
+- 💻 GitHub: [Altair788](https://github.com/Altair788  )  
 - 🌐 LinkedIn: *(по запросу)*
 
 ---
